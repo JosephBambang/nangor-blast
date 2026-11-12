@@ -10,7 +10,7 @@ Source for the Milestone 1 task-division PDF. Task IDs match `ARCHITECTURE.md` a
 | --- | --- | --- | --- |
 | 18225018 | Taufiq Muhammad Arif | Lead and integrator | Engine & Integration |
 | 18225036 | Arthuro Araf | Developer | Player & Arsenal |
-| 18225030 | Arion Togi Mindo Napitupulu | Developer | Enemies & GUI |
+| 18225030 | Arion Togi Mindo Napitupulu | Developer | Enemies |
 | 18225098 | Vinandiar Firdausiyah | Developer | World & Editor |
 
 ## How the work is split
@@ -21,16 +21,16 @@ Effort is balanced with rough points (1 point ≈ half a day). The numbers are e
 
 | Member | Mandatory | Bonus | Total |
 | --- | --- | --- | --- |
-| Taufiq | 14 | 1 | 15 |
+| Taufiq | 14 | 6 | 20 |
 | Arthuro | 11 | 4 | 15 |
-| Arion | 11 | 5 | 16 |
+| Arion | 11 | 0 | 11 |
 | Vinandiar | 11 | 4 | 15 |
 
-The lead carries more mandatory points and the smallest bonus because integration, reviews, and milestone submissions are also his and are not counted in points.
+The split is no longer even: the lead took the GUI bonus (B-01) on 12 Nov at his own request, on top of integration, reviews, and milestone submissions, which are not counted in points. Arion holds no bonus task and is the first candidate to take over work if another stream runs late. Rebalance at checkpoint I-01.
 
 ## Taufiq Muhammad Arif — Engine & Integration
 
-Packages: `core`, `engine`, `input`, `view.cli`
+Packages: `core`, `engine`, `input`, `view.cli`, `view.gui`
 
 | ID | Task | Spec | Pts |
 | --- | --- | --- | --- |
@@ -41,6 +41,7 @@ Packages: `core`, `engine`, `input`, `view.cli`
 | C-05 | Score, timer, win/lose check | F08, F09.4 | 1 |
 | C-06 | CLI renderer and HUD | F09.3 | 2 |
 | C-07 | Input mapping, menu, how-to-play, pause, end screens | F09.1, F09.5 | 2 |
+| B-01 | JavaFX view | B01 | 5 |
 | B-05 | Design-pattern audit and write-up | B05 | 1 |
 
 Lead duties: review and merge PRs, run integration checkpoints, take over any mandatory task that slips (MVP fallback), merge the class diagram and log activity, submit both milestones.
@@ -60,9 +61,9 @@ Packages: `player`, `bomb`
 | B-02 | Bomb Kick | B02 | 2 |
 | B-04 | Local multiplayer (co-op) | B04 | 2 |
 
-## Arion Togi Mindo Napitupulu — Enemies & GUI
+## Arion Togi Mindo Napitupulu — Enemies
 
-Packages: `enemy`, `view.gui`
+Packages: `enemy`
 
 | ID | Task | Spec | Pts |
 | --- | --- | --- | --- |
@@ -71,7 +72,6 @@ Packages: `enemy`, `view.gui`
 | E-03 | Boss framework: warning, attack, cooldown, vulnerability, phases | F05.3.1 | 3 |
 | E-04 | Mantis: Scythe Swipe and Jump Slam | F05.3.5 | 2 |
 | E-05 | Mantis: Spiderling (Hatchlings) and Wall Crawl | F05.3.5 | 2 |
-| B-01 | JavaFX view | B01 | 5 |
 
 ## Vinandiar Firdausiyah — World & Editor
 

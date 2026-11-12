@@ -35,7 +35,7 @@ src/
     engine/      # Game loop, threads, state machine, init, score, timer. Owner: Taufiq.
     input/       # Key bindings to Command objects. Owner: Taufiq.
     view/cli/    # Lanterna renderer and screens. Owner: Taufiq.
-    view/gui/    # JavaFX view (bonus). Owner: Arion.
+    view/gui/    # JavaFX view (bonus). Owner: Taufiq.
     player/      # Player rules. Owner: Arthuro.
     bomb/        # Bombs and explosions. Owner: Arthuro.
     enemy/       # Normal enemies, boss framework, Mantis. Owner: Arion.

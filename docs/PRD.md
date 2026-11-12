@@ -29,7 +29,7 @@ Four people build it in about three weeks, with two fixed deadlines. Without a s
 | --- | --- | --- |
 | 18225018 | Taufiq Muhammad Arif | Lead, integrator, Engine & Integration stream |
 | 18225036 | Arthuro Araf | Player & Arsenal stream |
-| 18225030 | Arion Togi Mindo Napitupulu | Enemies & GUI stream |
+| 18225030 | Arion Togi Mindo Napitupulu | Enemies stream |
 | 18225098 | Vinandiar Firdausiyah | World & Editor stream |
 
 AI coding agents work under `CLAUDE.md` and `WORKFLOW.md`.

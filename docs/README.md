@@ -66,9 +66,9 @@ The build is not set up yet (task C-01). These are the intended steps and will b
 
 | NIM | Name | Stream |
 | --- | --- | --- |
-| 18225018 | Taufiq Muhammad Arif | Lead · Engine & Integration (game loop, game flow, score, CLI view, integration) |
+| 18225018 | Taufiq Muhammad Arif | Lead · Engine & Integration (game loop, game flow, score, CLI view, JavaFX view, integration) |
 | 18225036 | Arthuro Araf | Player & Arsenal (player, bombs, explosion, Bomb Kick, multiplayer) |
-| 18225030 | Arion Togi Mindo Napitupulu | Enemies & GUI (normal enemies, Mantis, JavaFX view) |
+| 18225030 | Arion Togi Mindo Napitupulu | Enemies (normal enemies, boss Mantis, Hatchlings) |
 | 18225098 | Vinandiar Firdausiyah | World & Editor (map, validation, blocks, Ice Tile, power-ups, Map Maker) |
 
 Details: [`TASK-DIVISION.md`](TASK-DIVISION.md).

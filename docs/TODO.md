@@ -12,9 +12,9 @@ Last updated: 12 Nov 2026
 
 | Stream | Owner | Must done | Bonus done |
 | --- | --- | --- | --- |
-| Engine & Integration | Taufiq | 0 / 7 | 0 / 1 |
+| Engine & Integration | Taufiq | 0 / 7 | 0 / 2 |
 | Player & Arsenal | Arthuro | 0 / 6 | 0 / 2 |
-| Enemies & GUI | Arion | 0 / 5 | 0 / 1 |
+| Enemies | Arion | 0 / 5 | — |
 | World & Editor | Vinandiar | 0 / 5 | 0 / 1 |
 | Milestones & integration | Team | 0 / 13 | — |
 
@@ -74,7 +74,7 @@ Last updated: 12 Nov 2026
 
 | ID | Task | Owner | Spec | Priority | Depends on | Status | Next step or verification |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| B-01 | JavaFX view | Arion | B01 | Bonus | C-02 | Pending | May start early in parallel; it only reads `GameSnapshot`. |
+| B-01 | JavaFX view | Taufiq | B01 | Bonus | C-02 | Pending | May start early in parallel; it only reads `GameSnapshot`. |
 | B-02 | Bomb Kick | Arthuro | B02 | Bonus | A-04 | Pending | — |
 | B-03 | Map Maker with save and load | Vinandiar | B03 | Bonus | W-02 | Pending | — |
 | B-04 | Local multiplayer (co-op) | Arthuro | B04 | Bonus | P-02 | Pending | — |

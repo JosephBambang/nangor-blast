@@ -1,7 +1,7 @@
 # PRD — Nangor Blast
 
 > **Status** Draft v1 · **Author** Taufiq Muhammad Arif (lead) · **Last updated** 12 November 2026
-> **Source** `doc/IF2010 Spesifikasi Tugas Besar.md` (spec v1.0). Where this PRD and the spec disagree, the spec wins.
+> **Source** `docs/IF2010 Spesifikasi Tugas Besar.md` (spec v1.0). Where this PRD and the spec disagree, the spec wins.
 
 ## 1. Problem Statement
 
@@ -29,7 +29,7 @@ Four people build it in about three weeks, with two fixed deadlines. Without a s
 | --- | --- | --- |
 | 18225018 | Taufiq Muhammad Arif | Lead, integrator, Engine & Integration stream |
 | 18225036 | Arthuro Araf | Player & Arsenal stream |
-| 18225030 | Arion Togi Mindo Napitupulu | Enemies & GUI stream |
+| 18225030 | Arion Togi Mindo Napitupulu | Enemies stream |
 | 18225098 | Vinandiar Firdausiyah | World & Editor stream |
 
 AI coding agents work under `CLAUDE.md` and `WORKFLOW.md`.
@@ -127,7 +127,7 @@ As a player, I want to pause and restart so that I control the session.
 ## 6. Non-Functional Requirements
 
 - **Language and build** — Java, built with Gradle; a `Makefile` exposes build, run, test, and clean.
-- **Repository layout** — `src/`, `config/`, `doc/`, `Makefile`, and `README.md` exist at the root (M1 requirement).
+- **Repository layout** — `src/`, `config/`, `docs/`, and `Makefile` exist at the root; `README.md` is in `docs/` (the spec asks for a `doc` folder and a `README.md`; see pending decision 8).
 - **Concurrency** — input, simulation, and rendering run on separate named threads with no deadlock and no data race on game state.
 - **Timing** — all durations in the spec (fuses, explosion, warning, cooldown, invulnerability) are accurate to within one simulation tick.
 - **Modularity** — the game model has no dependency on any view; CLI and GUI are swappable.
@@ -150,5 +150,6 @@ As a player, I want to pause and restart so that I control the session.
 | 5 | How is the guaranteed Remote Detonator placed (fixed tile or forced drop)? | Vinandiar | 18 Nov |
 | 6 | Is the Reinforced Block required on a map that does not contain one? (Planned anyway for the Map Maker.) | Asistensi 1 | 16 Nov |
 | 7 | Base speeds for player, enemies, and Mantis; final key bindings | Team | 18 Nov |
+| 8 | The spec names the folder `doc` and lists `README.md` as repository content; the team uses `docs/` and keeps `README.md` inside it. Confirm this is accepted. | Asistensi 1 | 16 Nov |
 
 - **Changes** — record agreed scope changes here.

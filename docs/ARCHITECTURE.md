@@ -42,7 +42,7 @@ Root package: `nangorblast`, under `src/main/java/`. Tests mirror it under `src/
 | `player` | Arthuro | `Player`, movement, lives, invulnerability, respawn. |
 | `bomb` | Arthuro | `Bomb` hierarchy, `BombFactory`, `Explosion`, propagation, chain reaction, Bomb Kick. |
 | `enemy` | Arion | `Enemy` hierarchy, behaviors, boss framework, `Mantis`, `Hatchling`. |
-| `view.gui` | Arion | JavaFX view. |
+| `view.gui` | Taufiq | JavaFX view. |
 | `world` | Vinandiar | Map loader, validator, tiles, blocks, Ice Tile, power-ups. |
 | `editor` | Vinandiar | Map Maker. |
 
@@ -292,13 +292,14 @@ Points are rough effort estimates (1 ≈ half a day). Phase dates are in `WORKFL
 
 | ID | Step | Pts | Depends on | Completion criteria |
 | --- | --- | --- | --- | --- |
-| C-01 | Gradle scaffold, wrapper, `Makefile`, folders `src/ config/ doc/` | 1 | — | `make build`, `make run`, `make test`, `make clean` work on a clean clone. |
+| C-01 | Gradle scaffold, wrapper, `Makefile`, folders `src/ config/ docs/` | 1 | — | `make build`, `make run`, `make test`, `make clean` work on a clean clone. |
 | C-02 | `core` contracts plus a runnable skeleton with stub streams | 3 | C-01 | All types in the `core` row above compile; the skeleton starts and draws an empty map; each stream has a fake to test against. |
 | C-03 | Game loop and threads | 3 | C-02 | Named threads run; commands drain in order; a snapshot is published every tick; a 60 s soak test shows no deadlock. |
 | C-04 | Game state machine, initialization, restart | 2 | C-03 | F00.2 steps run in order; restart restores every initial value (F00.4); all five states are reachable. |
 | C-05 | Score, timer, win/lose check | 1 | C-04 | F08 table values are awarded; the bonus applies only on `WIN`; timer 0 gives `LOSE`. |
 | C-06 | CLI renderer and HUD | 2 | C-02 | The map renders with the `DESIGN.md` glyphs; lives, score, timer, and selected bomb are shown; no flicker. |
 | C-07 | Input mapping; menu, how-to-play, pause, and end screens | 2 | C-04 | Menu rules F09.1.2 pass; pause freezes all timers; resume, restart, and back-to-menu work. |
+| B-01 | JavaFX view | 5 | C-02 | The full game is playable in a window from the same `GameSnapshot`; the CLI still works. |
 | B-05 | Pattern audit: five patterns documented with code locations | 1 | I-02 | The table above matches the code; text is ready for the buklet. |
 
 ### Player & Arsenal — Arthuro
@@ -314,7 +315,7 @@ Points are rough effort estimates (1 ≈ half a day). Phase dates are in `WORKFL
 | B-02 | Bomb Kick | 2 | A-04 | The bomb slides until blocked; its fuse keeps running; it still explodes correctly. |
 | B-04 | Local multiplayer (co-op) | 2 | P-02 | Two players with separate keymaps, lives, and power-ups; shared score and timer; win/lose per B04. |
 
-### Enemies & GUI — Arion
+### Enemies — Arion
 
 | ID | Step | Pts | Depends on | Completion criteria |
 | --- | --- | --- | --- | --- |
@@ -323,7 +324,6 @@ Points are rough effort estimates (1 ≈ half a day). Phase dates are in `WORKFL
 | E-03 | Boss framework | 3 | E-01 | Warning 1 s → attack → cooldown 5 s; vulnerable for the first 4 s after flagged attacks; phase 2 at half health; no immediate repeat; attacks stop at blocks. |
 | E-04 | Mantis: Scythe Swipe and Jump Slam | 2 | E-03 | Areas and durations match F05.3.5 in both phases. |
 | E-05 | Mantis: Spiderling (Hatchlings) and Wall Crawl | 2 | E-03 | 3 Hatchlings (4 in phase 2) spawn on free tiles and chase; Wall Crawl repositions, then swipes in phase 2. |
-| B-01 | JavaFX view | 5 | C-02 | The full game is playable in a window from the same `GameSnapshot`; the CLI still works. |
 
 ### World & Editor — Vinandiar
 
@@ -343,8 +343,8 @@ Points are rough effort estimates (1 ≈ half a day). Phase dates are in `WORKFL
 | M-01 | Schedule Asistensi 1 with the assistant | Taufiq | — | Time agreed at least 24 h ahead. |
 | M-02 | Asistensi 1 | All | M-01 | Held by 16 Nov; pending PRD questions answered; every attendee submits the form within 1 h. |
 | M-03 | Invite the assistant to the repository | Taufiq | — | Invitation accepted. |
-| M-04 | Class-diagram PDF | All, merged by Taufiq | C-02 | Diagram above extended by each owner and exported to `doc/`. |
-| M-05 | Task-division PDF | Taufiq | — | `doc/TASK-DIVISION.md` exported to `doc/`. |
+| M-04 | Class-diagram PDF | All, merged by Taufiq | C-02 | Diagram above extended by each owner and exported to `docs/`. |
+| M-05 | Task-division PDF | Taufiq | — | `docs/TASK-DIVISION.md` exported to `docs/`. |
 | M-06 | Submit Milestone 1 | Taufiq | M-03, M-04, M-05, C-01 | Form submitted by 17 Nov 20.10; tag `milestone-1`. |
 | I-01 | Integration checkpoint 1 (MVP) | Taufiq + all | C-03–C-07, P-01, P-02, A-01, A-04, E-01, W-01, W-03 | One build on `develop` is playable from menu to `WIN` or `LOSE` (22 Nov). |
 | I-02 | Integration checkpoint 2 (feature freeze) | Taufiq + all | all Must tasks | Every PRD acceptance criterion for US-01…US-09 passes (28 Nov). |

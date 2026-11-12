@@ -37,11 +37,50 @@ Examples: `feature/core-C-03-game-loop`, `feature/arsenal-A-04-explosion`, `feat
 Rules:
 
 1. Branch from the latest `develop`; rebase on `develop` at least daily.
-2. Keep a PR to one task ID. Put the ID in the PR title, for example `A-04 Explosion propagation`.
+2. Keep a PR to one task ID. Title it like a commit message, for example `feat(bomb): add explosion propagation and chain reaction (A-04)`.
 3. A PR needs green tests and one approval from the lead. The lead's own PRs need one approval from any member.
 4. Squash-merge into `develop`. Delete the branch after merging.
 5. Never push directly to `main` or `develop`.
-6. Commit messages: `<ID>: <what changed>`, for example `W-04: stop slide before obstacle`.
+6. Commit messages follow the Conventional Commits format below.
+
+## Commit messages
+
+Format: `<type>(<scope>): <summary> (<ID>)`
+
+- **type** — one of the table below.
+- **scope** — the stream or area: `core`, `engine`, `input`, `cli`, `gui`, `player`, `bomb`, `enemy`, `world`, `editor`, `build`, `docs`. Optional when the change is repository-wide.
+- **summary** — imperative mood, lower case, no trailing period, at most 72 characters for the whole first line.
+- **ID** — the task ID from `TODO.md`, when the commit belongs to a task.
+
+| Type | Use for |
+| --- | --- |
+| `feat` | A new game feature or behavior |
+| `fix` | A bug fix |
+| `docs` | Documentation only (Markdown, diagrams, buklet, log activity) |
+| `test` | Adding or correcting tests, no production code change |
+| `refactor` | Code change that neither fixes a bug nor adds a feature |
+| `perf` | Performance improvement |
+| `style` | Formatting only, no logic change |
+| `build` | Gradle, `Makefile`, dependencies |
+| `ci` | CI configuration |
+| `chore` | Maintenance that fits none of the above (`.gitignore`, config files) |
+| `revert` | Reverting an earlier commit |
+
+Examples:
+
+```text
+feat(bomb): add explosion propagation and chain reaction (A-04)
+fix(world): stop ice slide before an obstacle (W-04)
+test(enemy): cover chase-to-patrol transition (E-02)
+build: add gradle wrapper and makefile targets (C-01)
+docs: add project documentation and task tracker (D-00)
+```
+
+Further rules:
+
+- One logical change per commit. Explain the why in the body when it is not obvious, separated from the first line by a blank line.
+- A change that breaks a `core` contract adds `!` after the scope and a `BREAKING CHANGE:` footer, for example `feat(core)!: add player id to Command`.
+- PR titles use the same format, because the squash merge turns the PR title into the commit on `develop`.
 
 ## Definition of done
 
@@ -65,7 +104,7 @@ The lead is responsible for a playable mandatory game.
 
 ## Log activity
 
-Each member keeps `doc/log/<name>.md` in the spec format (`Waktu | Kegiatan | Hasil`) and adds a row whenever they work. The lead merges these into one document for Milestone 2. Entries must be the member's own words.
+Each member keeps `docs/log/<name>.md` in the spec format (`Waktu | Kegiatan | Hasil`) and adds a row whenever they work. The lead merges these into one document for Milestone 2. Entries must be the member's own words.
 
 ## Asistensi
 
@@ -78,5 +117,5 @@ Each member keeps `doc/log/<name>.md` in the spec format (`Waktu | Kegiatan | Ha
 - **Proceed within scope.** Read `CLAUDE.md`, this file, and `TODO.md` first. Work on clear tasks inside the owner's packages and the agreed scope.
 - **Ask when a decision matters.** Ask before changing a `core` contract, adding a dependency, expanding scope, or resolving a spec ambiguity that is listed as pending.
 - **Verify completion.** Apply the definition of done. Report the commands run and their results; state plainly anything not verified.
-- **Hand off Git commands.** The user stages, commits, and pushes. After changes, summarize the work and give `git add -- <files>`, `git diff --cached`, `git commit -m "<ID>: <message>"`, and `git push origin <branch>`.
+- **Hand off Git commands.** The user stages, commits, and pushes. After changes, summarize the work and give `git add -- <files>`, `git diff --cached`, `git commit -m "<type>(<scope>): <summary> (<ID>)"` in the format above, and `git push origin <branch>`.
 - **Keep documents current.** When a decision changes, update the source document and the affected `TODO.md` rows in the same change.

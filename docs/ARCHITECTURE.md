@@ -292,7 +292,7 @@ Points are rough effort estimates (1 ≈ half a day). Phase dates are in `WORKFL
 
 | ID | Step | Pts | Depends on | Completion criteria |
 | --- | --- | --- | --- | --- |
-| C-01 | Gradle scaffold, wrapper, `Makefile`, folders `src/ config/ doc/` | 1 | — | `make build`, `make run`, `make test`, `make clean` work on a clean clone. |
+| C-01 | Gradle scaffold, wrapper, `Makefile`, folders `src/ config/ docs/` | 1 | — | `make build`, `make run`, `make test`, `make clean` work on a clean clone. |
 | C-02 | `core` contracts plus a runnable skeleton with stub streams | 3 | C-01 | All types in the `core` row above compile; the skeleton starts and draws an empty map; each stream has a fake to test against. |
 | C-03 | Game loop and threads | 3 | C-02 | Named threads run; commands drain in order; a snapshot is published every tick; a 60 s soak test shows no deadlock. |
 | C-04 | Game state machine, initialization, restart | 2 | C-03 | F00.2 steps run in order; restart restores every initial value (F00.4); all five states are reachable. |
@@ -343,8 +343,8 @@ Points are rough effort estimates (1 ≈ half a day). Phase dates are in `WORKFL
 | M-01 | Schedule Asistensi 1 with the assistant | Taufiq | — | Time agreed at least 24 h ahead. |
 | M-02 | Asistensi 1 | All | M-01 | Held by 16 Nov; pending PRD questions answered; every attendee submits the form within 1 h. |
 | M-03 | Invite the assistant to the repository | Taufiq | — | Invitation accepted. |
-| M-04 | Class-diagram PDF | All, merged by Taufiq | C-02 | Diagram above extended by each owner and exported to `doc/`. |
-| M-05 | Task-division PDF | Taufiq | — | `doc/TASK-DIVISION.md` exported to `doc/`. |
+| M-04 | Class-diagram PDF | All, merged by Taufiq | C-02 | Diagram above extended by each owner and exported to `docs/`. |
+| M-05 | Task-division PDF | Taufiq | — | `docs/TASK-DIVISION.md` exported to `docs/`. |
 | M-06 | Submit Milestone 1 | Taufiq | M-03, M-04, M-05, C-01 | Form submitted by 17 Nov 20.10; tag `milestone-1`. |
 | I-01 | Integration checkpoint 1 (MVP) | Taufiq + all | C-03–C-07, P-01, P-02, A-01, A-04, E-01, W-01, W-03 | One build on `develop` is playable from menu to `WIN` or `LOSE` (22 Nov). |
 | I-02 | Integration checkpoint 2 (feature freeze) | Taufiq + all | all Must tasks | Every PRD acceptance criterion for US-01…US-09 passes (28 Nov). |

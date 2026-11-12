@@ -2,7 +2,7 @@
 
 A real-time Bomberman game in Java for the IF2010 Object-Oriented Programming course project. It runs in a terminal (mandatory) and in a JavaFX window (bonus). The group implements map Type D, White Glacier, with the boss Mantis.
 
-Read `WORKFLOW.md` and `TODO.md` before starting work. Scope is in `PRD.md`; the design is in `ARCHITECTURE.md`; visual rules are in `DESIGN.md`. The course spec is `doc/IF2010 Spesifikasi Tugas Besar.md` and overrides every other document.
+Read `docs/WORKFLOW.md` and `docs/TODO.md` before starting work. Scope is in `docs/PRD.md`; the design is in `docs/ARCHITECTURE.md`; visual rules are in `docs/DESIGN.md`. The course spec is `docs/IF2010 Spesifikasi Tugas Besar.md` and overrides every other document.
 
 **Current state:** documentation only. No source code or build files exist yet (task C-01).
 
@@ -22,7 +22,7 @@ Ask before adding any other dependency.
 
 ## Design system
 
-`DESIGN.md` defines the glyph for every tile and entity (from spec legend F07.2), the color tokens, and the HUD layout. The CLI and GUI views both read from it. When a glyph or color changes, update `DESIGN.md` and both views together.
+`docs/DESIGN.md` defines the glyph for every tile and entity (from spec legend F07.2), the color tokens, and the HUD layout. The CLI and GUI views both read from it. When a glyph or color changes, update `docs/DESIGN.md` and both views together.
 
 ## Project Structure
 
@@ -43,9 +43,8 @@ src/
     editor/      # Map Maker (bonus). Owner: Vinandiar.
   test/java/nangorblast/   # Mirrors main
 config/          # Map files and game settings loaded at runtime
-doc/             # Course spec, PDFs, task division, log activity
+docs/            # Project documents, course spec, PDFs, task division, log activity
 skills/          # Project skills for coding agents
-project-setup/   # Documentation workflow skill (reference only)
 ```
 
 ## Code Conventions
@@ -60,7 +59,7 @@ project-setup/   # Documentation workflow skill (reference only)
 - **Naming.** Classes and attributes follow the spec tables where they exist. Code and comments are in English.
 - **Tests.** Every game rule gets a JUnit test that runs without a terminal.
 - **Traceability.** Cite the spec section in a short comment where a rule is implemented, for example `// F03.2 #8`.
-- If a request is ambiguous or touches a pending decision in `PRD.md`, ask before coding.
+- If a request is ambiguous or touches a pending decision in `docs/PRD.md`, ask before coding.
 
 ## Features
 
@@ -83,7 +82,7 @@ project-setup/   # Documentation workflow skill (reference only)
 - Do not import Lanterna or JavaFX outside `view` and `input`.
 - Do not implement other maps, bosses, or tiles (Water, Lava, Laser, Switch, Gate); they are out of scope.
 - Do not push to `main` or `develop` directly.
-- Do not mark a `TODO.md` row `Done` without checking its completion criteria.
+- Do not mark a `docs/TODO.md` row `Done` without checking its completion criteria.
 
 ## Testing and Build
 
@@ -104,5 +103,5 @@ After finishing changes, summarize the result and provide Git commands in the re
 
 1. `git add -- <changed-file-path>`
 2. `git diff --cached`
-3. `git commit -m "<ID>: <message>"`
-4. `git push origin <branch>` — branch names follow `WORKFLOW.md`.
+3. `git commit -m "<type>(<scope>): <summary> (<ID>)"` — Conventional Commits; types, scopes, and examples are in `docs/WORKFLOW.md`.
+4. `git push origin <branch>` — branch names follow `docs/WORKFLOW.md`.

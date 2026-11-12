@@ -1,6 +1,6 @@
 # Project Tasks — Nangor Blast
 
-Local tracker. IDs, completion criteria, and dependencies come from `ARCHITECTURE.md`; ownership detail is in `doc/TASK-DIVISION.md`.
+Local tracker. IDs, completion criteria, and dependencies come from `ARCHITECTURE.md`; ownership detail is in `docs/TASK-DIVISION.md`.
 
 - **Status** — `Pending`, `In progress`, `Blocked`, or `Done`. Mark `Done` only after the completion criteria were checked; write what was checked in the last column.
 - **Priority** — `Must` (mandatory spec or milestone) or `Bonus`.
@@ -32,9 +32,9 @@ Last updated: 12 Nov 2026
 
 | ID | Task | Owner | Spec | Priority | Depends on | Status | Next step or verification |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| M-02 | Asistensi 1; each attendee submits the form within 1 h | All | Asistensi | Must | M-01 | Pending | Bring PRD pending questions 2, 3, 4, 6. |
+| M-02 | Asistensi 1; each attendee submits the form within 1 h | All | Asistensi | Must | M-01 | Pending | Bring PRD pending questions 2, 3, 4, 6, 8. |
 | M-04 | Class-diagram PDF | All, merged by Taufiq | M1 | Must | C-02 | Pending | Each owner extends their part of the Mermaid diagram by 15 Nov. |
-| M-05 | Task-division PDF | Taufiq | M1 | Must | — | Pending | Export `doc/TASK-DIVISION.md` after team agreement. |
+| M-05 | Task-division PDF | Taufiq | M1 | Must | — | Pending | Export `docs/TASK-DIVISION.md` after team agreement. |
 | M-06 | Submit Milestone 1 form; tag `milestone-1` | Taufiq | M1 | Must | M-03, M-04, M-05, C-01 | Pending | — |
 
 ## Phase 1 — MVP (14–22 Nov)
@@ -87,12 +87,12 @@ Last updated: 12 Nov 2026
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | I-03 | Final integration test with bonuses on | All | Pedoman 10 | Must | I-02, bonuses | Pending | — |
 | M-08 | Buklet: A5, ≤15 pages, PDF | All; editor pending | Buklet | Must | I-02 | Pending | Team picks an editor; each member writes their stream's section. |
-| M-09 | Log activity, one table per member | All, merged by Taufiq | Log Activity | Must | — | Pending | Everyone logs from day 1 in `doc/log/<name>.md`. |
+| M-09 | Log activity, one table per member | All, merged by Taufiq | Log Activity | Must | — | Pending | Everyone logs from day 1 in `docs/log/<name>.md`. |
 | M-10 | Release `v1.0.0`, repo public, submit form | Taufiq | M2 | Must | I-03, M-08, M-09 | Pending | Publish by midday 4 Dec; deadline 20.10. |
 
 ## Blockers and open questions
 
 | # | Item | Waiting on |
 | --- | --- | --- |
-| 1 | PRD pending decisions 1–7 | Asistensi 1 and team |
+| 1 | PRD pending decisions 1–8 | Asistensi 1 and team |
 | 2 | `make` and a JDK-compatible Gradle are not set up | C-01 |

@@ -71,7 +71,7 @@ The build is not set up yet (task C-01). These are the intended steps and will b
 | 18225030 | Arion Togi Mindo Napitupulu | Enemies & GUI (normal enemies, Mantis, JavaFX view) |
 | 18225098 | Vinandiar Firdausiyah | World & Editor (map, validation, blocks, Ice Tile, power-ups, Map Maker) |
 
-Details: [`doc/TASK-DIVISION.md`](doc/TASK-DIVISION.md).
+Details: [`TASK-DIVISION.md`](TASK-DIVISION.md).
 
 ## Project Documents
 
@@ -82,5 +82,5 @@ Details: [`doc/TASK-DIVISION.md`](doc/TASK-DIVISION.md).
 | [`TODO.md`](TODO.md) | Task tracker |
 | [`WORKFLOW.md`](WORKFLOW.md) | Schedule, branches, definition of done |
 | [`DESIGN.md`](DESIGN.md) | Glyphs, colors, screen layout |
-| [`CLAUDE.md`](CLAUDE.md) | Instructions for coding agents |
-| [`doc/IF2010 Spesifikasi Tugas Besar.md`](doc/IF2010%20Spesifikasi%20Tugas%20Besar.md) | Course specification |
+| [`CLAUDE.md`](../CLAUDE.md) | Instructions for coding agents |
+| [`IF2010 Spesifikasi Tugas Besar.md`](IF2010%20Spesifikasi%20Tugas%20Besar.md) | Course specification |
